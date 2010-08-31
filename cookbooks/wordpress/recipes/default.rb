@@ -32,6 +32,7 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
     execute "start-php" do
       command "/usr/bin/spawn-fcgi -f /usr/bin/php-cgi -a 127.0.0.1 -p 9000 -P /var/run/fastcgi-php.pid"
       action :run
+      not_if "netstat -lnp | grep 9000"
     end
   end
 end
