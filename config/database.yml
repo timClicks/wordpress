@@ -1,0 +1,1 @@
+# must be here in order for rake db:migrate to run on deploy.
