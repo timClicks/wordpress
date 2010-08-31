@@ -8,7 +8,7 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
   node[:applications].each do |app_name,data|
     user = node[:users].first
 
-    template "/data/#{app_name}/current" do
+    template "/data/#{app_name}/current/wp-config.php" do
       owner user[:username]
       group user[:username]
       mode 0644
