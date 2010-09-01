@@ -19,7 +19,9 @@ node[:applications].each do |app_name,data|
 end
 
 # start php
-sudo "/usr/bin/spawn-fcgi -f /usr/bin/php-cgi -a 127.0.0.1 -p 9000 -P /var/run/fastcgi-php.pid" if "netstat -lnp | grep 9000"
+if "netstat -lnp | grep 9000"
+  sudo "/usr/bin/spawn-fcgi -f /usr/bin/php-cgi -a 127.0.0.1 -p 9000 -P /var/run/fastcgi-php.pid"
+end  
 
 # restart nginx
 # this is required because of the change in nginx files above
