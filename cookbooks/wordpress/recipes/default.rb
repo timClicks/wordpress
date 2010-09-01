@@ -17,7 +17,7 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
         :app_name => app_name,
         :dbpass => node[:users].first[:password]
       })
-      not_if "/data/#{app_name}/current/"
+      not_if "ls /data/#{app_name}/current/"
     end
 
     template "/etc/nginx/servers/#{app_name}-chef.conf" do
@@ -28,12 +28,6 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
       variables({
         :app_name => app_name
       })
-    end
-  
-    execute "start-php" do
-      command "/usr/bin/spawn-fcgi -f /usr/bin/php-cgi -a 127.0.0.1 -p 9000 -P /var/run/fastcgi-php.pid"
-      action :run
-      not_if "netstat -lnp | grep 9000"
     end
   end
 end
