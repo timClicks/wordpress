@@ -17,6 +17,7 @@ if ['solo', 'app', 'app_master'].include?(node[:instance_role])
         :app_name => app_name,
         :dbpass => node[:users].first[:password]
       })
+      not_if "/data/#{app_name}/current/"
     end
 
     template "/etc/nginx/servers/#{app_name}-chef.conf" do

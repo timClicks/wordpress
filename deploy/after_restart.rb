@@ -1,6 +1,8 @@
-# deal with monit
+# thank you dennis j. bell for the wizardy here.
+# take all the .monitrc files and rename them to .monitrc.bak so monit won't find them
+# when we quit monit it will no longer try to start a "Ruby" application
 
-sudo "foreach old in (/etc/monit.d/*.monitrc); do new=`echo $old | sed -e 's/monitrc$/monitrc.bak/'`; mv $old $new; done"
+sudo "for old in /etc/monit.d/*.monitrc; do new=`echo $old | sed -e 's/monitrc$/monitrc.bak/'`; mv $old $new; done"
 sudo "monit quit"
 
 node[:applications].each do |app_name,data|
