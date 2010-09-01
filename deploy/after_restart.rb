@@ -1,3 +1,5 @@
+# after_restart.rb
+
 # thank you dennis j. bell for the wizardy here
 # take all the .monitrc files and rename them to .monitrc.bak so monit won't find them
 # when we quit monit it will no longer try to start a "Ruby" application
