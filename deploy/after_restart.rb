@@ -19,7 +19,7 @@ node[:applications].each do |app_name,data|
 end
 
 # start php
-sudo "/usr/bin/spawn-fcgi -f /usr/bin/php-cgi -a 127.0.0.1 -p 9000 -P /var/run/fastcgi-php.pid"
+sudo "pkill php-cgi && sleep 5 && /usr/bin/spawn-fcgi -f /usr/bin/php-cgi -a 127.0.0.1 -p 9000 -P /var/run/fastcgi-php.pid" 
 
 # restart nginx
 # this is required because of the change in nginx files above
