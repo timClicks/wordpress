@@ -1,7 +1,6 @@
 # before_restart.rb
 
 node[:applications].each do |app_name,data|
-  :app_name = app_name
 
   # setup wp-config.php file
   "erubis cookbooks/wordpress/templates/default/wp-config.php.erb > /data/#{app_name}/shared/config/wp-config.php"
