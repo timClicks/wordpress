@@ -1,6 +1,6 @@
 # before_restart.rb
 
-sudo "cat cookbooks/wordpress/filmes/default/spawn-fcgi-php > /etc/init.d/spawn-fcgi-php"
+sudo "cat cookbooks/wordpress/files/default/spawn-fcgi-php > /etc/init.d/spawn-fcgi-php"
 sudo "chmod 755 /etc/init.d/spawn-fcgi-php"
 
 node[:applications].each do |app_name,data|
