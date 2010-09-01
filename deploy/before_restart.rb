@@ -2,7 +2,7 @@
 
 node[:applications].each do |app_name,data|
 
-  sudo "cat cookbooks/wordpress/files/default/spawn-fcgi-php > /etc/init.d/spawn-fcgi-php"
+  sudo "cat /data/#{app_name}/current/cookbooks/wordpress/files/default/spawn-fcgi-php > /etc/init.d/spawn-fcgi-php"
   sudo "chmod 755 /etc/init.d/spawn-fcgi-php"
 
   # setup wp-config.php file
