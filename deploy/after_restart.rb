@@ -19,7 +19,7 @@ node[:applications].each do |app_name,data|
 end
 
 # restart php
-# sudo "/etc/init.d/spawn-fcgi-php start"
+sudo "/etc/init.d/spawn-fcgi-php restart"
 
 # restart nginx
 # this is required because of the change in nginx files above
