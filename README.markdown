@@ -73,6 +73,8 @@ You also need to have your repository checked out to your local machine, so we c
 
   3. From that new folder, let's upload the custom chef recipes.
 
+`cd ~/code/wordpress`
+
 `ey recipes upload`
 
   4. This will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard AppCloud.
