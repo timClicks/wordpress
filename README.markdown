@@ -94,8 +94,8 @@ You also need to have your repository checked out to your local machine, so we c
 
 ## Explanation of Non-Wordpress Files
 
-  README.markdown
-  Rakefile
-  cookbooks/
-  config/
-  deploy/
+    README.markdown
+    Rakefile
+    cookbooks/
+    config/
+    deploy/
