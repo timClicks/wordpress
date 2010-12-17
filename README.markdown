@@ -77,16 +77,16 @@ You also need to have your repository checked out to your local machine, so we c
 
   * This command will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard AppCloud.
 
-### Step 8. Deploy Your Application & Run Chef
+	* Then we'll run the custom chef recipes from the CLI to finish it off.
 
-  * Now log back into EY AppCloud and Deploy your app.
+`ey recipes apply`
+
+  * Now log back into EY AppCloud and to deploy your app in Step 8.
+
+### Step 8. Deploy Your Application & Run Chef
 
   1. In the Dashboard, click on the **Applications** tab for your environment.
   2. Click on the **Deploy** link there.
-
-  * Then we'll run the custom chef recipes from the CLI to finish it off.
-
-`ey recipes apply`
 
 ### Step 9. Open Your Wordpress Blog
 
