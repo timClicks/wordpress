@@ -69,7 +69,7 @@ You also need to have your repository checked out to your local machine, so we c
 
 `git clone git@github.com:<username>/wordpress.git`
 
-  * Now move into that folder so we can upload your chef recipes.
+  * Now move into that folder so we can upload the chef recipes.
 
 `cd ~/code/wordpress`
 
