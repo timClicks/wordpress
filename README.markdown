@@ -53,13 +53,49 @@ You need to fork your own Git Repository URI so that you can add a Deploy Key in
   3. In order to setup your DNS later, you'll need to use an IP address.  So make sure to choose **Add IP Address** from the *External Address* drop-down.
   4. Click **Boot This Configuration** to start the instance.
 
-### Step 7. 
+### Step 7. Meanwhile Back at the CLI
 
+While that environment boots, let's get some other things setup.
+
+In order to complete the installation, you'll need to install the `engineyard` rubygem.
+
+`sudo gem install engineyard`
+
+You also need to have your repository checked out to your local machine, so we can run a couple of commands to upload and run custom chef recipes on your environment.
+
+  1. Open your code directory.
+
+`cd ~/code`
+
+  2. Run the git command to clone the repository locally.  **USE YOUR REPO**
+
+`git clone git@github.com:<username>/wordpress.git`
+
+  3. From that new folder, let's upload the custom chef recipes.
+
+`ey recipes upload`
+
+  4. This will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard AppCloud.
+
+### Step 8. Deploy the Application
+
+  1. While we are here in the CLI, we can deploy the application.
+
+`ey deploy --no-migrate`
+
+  2. Then we'll run the custom chef recipes to finish it off.
+
+`ey recipes apply`
+
+### Step 9. Open Your Wordpress Blog
+
+  1. Go to your Engine Yard AppCloud Dashboard, then click on the **HTTP** link.
+  2. You can start to setup your Wordpress blog.  Enjoy!
 
 ## Explanation of Non-Wordpress Files
 
-README.markdown
-Rakefile
-cookbooks/
-config/
-deploy/
+  README.markdown
+  Rakefile
+  cookbooks/
+  config/
+  deploy/
