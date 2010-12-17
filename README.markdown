@@ -76,8 +76,7 @@ You also need to have your repository checked out to your local machine, so we c
 `ey recipes upload`
 
   * This command will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard AppCloud.
-
-	* Then we'll run the custom chef recipes from the CLI to finish it off.
+  * Then we'll run the custom chef recipes from the CLI to finish it off.
 
 `ey recipes apply`
 
