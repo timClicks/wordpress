@@ -89,7 +89,7 @@ You also need to have your repository checked out to your local machine, so we c
 
 ### Step 9. Open Your Wordpress Blog
 
-  1. Go to your Engine Yard AppCloud Dashboard, then click on the **HTTP** link.
+  1. Now you're ready to click on the **HTTP** link in your environment.
   2. You can start to setup your Wordpress blog.  Enjoy!
 
 ## Explanation of Non-Wordpress Files
