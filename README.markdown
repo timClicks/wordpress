@@ -94,8 +94,9 @@ You also need to have your repository checked out to your local machine, so we c
 
 ## Explanation of Non-Wordpress Files
 
-    README.markdown
-    Rakefile
-    cookbooks/
-    config/
-    deploy/
+    README.markdown  |  You're reading it sonny-jim.
+    Rakefile         |  Tasks to create a cookbook or test for syntax errors.
+    cookbooks/       |  The custom chef recipes folder.
+    deploy/          |  This folder allows for EY AppCloud deploy hooks.
+
+Read the code in the files for more information.  The rest of the files are needed to run wordpress.
