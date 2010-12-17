@@ -55,9 +55,7 @@ You need to fork your own Git Repository URI so that you can add a Deploy Key in
 
 ### Step 7. Meanwhile Back at the CLI
 
-While that environment boots, let's get some other things setup.
-
-In order to complete the installation, you'll need to install the `engineyard` rubygem.
+While that environment boots, let's get some other things setup.  In order to complete the installation, you'll need to install the `engineyard` rubygem.
 
 `sudo gem install engineyard`
 
@@ -101,4 +99,4 @@ You also need to have your repository checked out to your local machine, so we c
     cookbooks/       |  The custom chef recipes folder.
     deploy/          |  This folder allows for EY AppCloud deploy hooks.
 
-Read the code in the files for more information.  The rest of the files are needed to run wordpress.
+Read the code in the files for more information.  The rest of the files are needed to run Wordpress.
