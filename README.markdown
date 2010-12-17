@@ -63,29 +63,29 @@ In order to complete the installation, you'll need to install the `engineyard` r
 
 You also need to have your repository checked out to your local machine, so we can run a couple of commands to upload and run custom chef recipes on your environment.
 
-  1. Open your code directory.
+  * Open your code directory.
 
 `cd ~/code`
 
-  2. Run the git command to clone the repository locally.  **USE YOUR REPO**
+  * Run the git command to clone the repository locally.  **USE YOUR REPO**
 
 `git clone git@github.com:<username>/wordpress.git`
 
-  3. From that new folder, let's upload the custom chef recipes.
+  * From that new folder, let's deploy the application.
 
 `cd ~/code/wordpress`
 
-`ey recipes upload`
-
-  4. This will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard AppCloud.
-
-### Step 8. Deploy the Application
-
-  1. While we are here in the CLI, we can deploy the application.
-
 `ey deploy --no-migrate`
 
-  2. Then we'll run the custom chef recipes to finish it off.
+  * This will prompt you for your username and password (unless you've used this before).  Enter the same user/pass you use to login to Engine Yard AppCloud.
+
+### Step 8. Apply the Chef Recipes
+
+  * In order to run your chef recipes, we need to upload them.  
+
+`ey recipes upload`
+
+  * Then we'll run the custom chef recipes to finish it off.
 
 `ey recipes apply`
 
