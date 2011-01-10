@@ -2,7 +2,7 @@ server {
         listen       80;  
         server_name   _;  
 
-        location / {
+        location /blog/ {
                 root   /data/<%= @app_name %>/current;
                 index  index.php index.html index.htm;
 		
